@@ -1,0 +1,12 @@
+.elements__title{
+    font-family: "Inter", "Arial", sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    font-style: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+    margin-top: 25px;
+    grid-row: 1/4;
+}

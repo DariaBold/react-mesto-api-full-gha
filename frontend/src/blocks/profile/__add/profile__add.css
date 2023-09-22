@@ -1,0 +1,29 @@
+.profile__add{
+    max-width: 150px;
+    width: 100%;
+    min-height: 50px;
+    background-image: url(../../../images/Vector.svg);
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: center;
+    border: #fff 2px solid;
+    align-self: center;
+    border-radius: 2px;
+    margin-left: auto;
+    cursor: pointer;
+}
+.profile__add:hover{
+    opacity: 0.6;
+}
+@media screen and (max-width: 1280px) {
+    .profile__add {
+      background-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1280 - 320)));
+    }
+  }
+@media screen and (max-width: 768px) {
+    .profile__add {
+        margin: 0 auto;
+        justify-self: center;
+        max-width: 282px;
+    }
+}

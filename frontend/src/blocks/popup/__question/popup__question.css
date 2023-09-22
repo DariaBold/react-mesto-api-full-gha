@@ -1,0 +1,8 @@
+.popup__question{
+    margin: 34px auto 10px 36px;
+}
+@media screen and (max-width: 1280px) {
+    .popup__question {
+        margin-bottom: calc(35px + (10 - 35) * ((100vw - 320px) / (1280 - 320)));
+    }
+}

@@ -1,0 +1,7 @@
+.elements__card {
+    max-width: 282px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    display: inherit;
+}

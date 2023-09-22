@@ -1,0 +1,8 @@
+.elements__text {
+    margin-left: 21px;
+    margin-bottom: 25px;
+    display: grid;
+    justify-content: space-between;
+    max-width: 241px;
+    row-gap: 3px;
+}

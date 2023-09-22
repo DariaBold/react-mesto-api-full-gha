@@ -1,0 +1,23 @@
+.profile__photo{
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+    .profile__photo {
+        margin-top: 5px;
+    }
+}
+.profile__photo:hover{
+    animation: opacity 0.5s;
+    opacity:0.2;
+}
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}

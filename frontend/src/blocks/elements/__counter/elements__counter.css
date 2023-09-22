@@ -1,0 +1,8 @@
+.elements__counter{
+    font-family: "Inter", "Arial", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    place-self: center;
+}

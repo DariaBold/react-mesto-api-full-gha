@@ -1,0 +1,14 @@
+.profile__text{
+    align-self: center;
+    margin-left: 30px;
+    width: 60%;
+}
+@media screen and (max-width: 768px) {
+    .profile__text {
+        justify-self: center;
+        margin-top: 27px;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+ 

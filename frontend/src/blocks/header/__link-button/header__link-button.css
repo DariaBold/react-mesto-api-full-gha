@@ -1,0 +1,10 @@
+.header__link-button{
+    text-decoration: none;
+    color: #A9A9A9;
+}
+.header__link.header__link-button{
+    color: white;
+}
+.header__link-button:hover{
+    opacity: 0.6;
+}

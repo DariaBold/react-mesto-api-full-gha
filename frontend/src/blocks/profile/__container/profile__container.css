@@ -1,0 +1,9 @@
+.profile__container{
+    display: flex;
+}
+@media screen and (max-width: 768px) {
+    .profile__container {
+        place-content: center;
+        width: 98%;
+    }
+}
