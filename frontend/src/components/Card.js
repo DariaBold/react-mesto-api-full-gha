@@ -1,10 +1,14 @@
 import React from "react";
 import CurrentUserContext from "../contexts/CurrentUserContext";
+import PopupWithForm from "./PopupWithForm.js";
 
 function Card({ card, onCardClick, onCardLike, onCardDelete }) {
   const currentUser = React.useContext(CurrentUserContext);
-  const isOwn = card.owner._id === currentUser._id;
-  const isLiked = card.likes.some((i) => i._id === currentUser._id);
+  const isOwn = card.owner === currentUser._id;
+  const isLiked = card.likes.some((i) => i === currentUser._id);
+  const [isClick, setIsClick] = React.useState(false);
+  const [isFinfId, setIsFinfId] = React.useState('');
+
   const cardLikeButtonClassName = `elements__like ${
     isLiked && "elements__like_active"
   }`;
@@ -16,10 +20,31 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
   function handleClick() {
     onCardClick(card);
   }
-  function handleDeleteClick() {
-    onCardDelete(card._id);
+  
+  function handleClickTrash() {
+    setIsFinfId(card._id);
+    setIsClick(true);
+  }
+  function handleDeleteClick(e) {
+    e.preventDefault();
+    handleClickClose();
+    onCardDelete(isFinfId);
+  }
+  function handleClickClose() {
+    setIsFinfId('');
+    setIsClick(false);
   }
   return (
+    <> 
+    <PopupWithForm
+      isOpen={isClick}
+      title="Вы уверены?"
+      name="question"
+      buttonText="Да"
+      onSubmit={handleDeleteClick}
+      isValid={true}
+      onClose={handleClickClose}
+    ></PopupWithForm>
     <article className="elements__card">
       <img
         className="elements__image"
@@ -33,7 +58,7 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
           type="button"
           name="trash"
           aria-label="Удалить"
-          onClick={handleDeleteClick}
+          onClick={handleClickTrash}
         ></button>
       )}
       <div className="elements__text">
@@ -48,6 +73,7 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
         <span className="elements__counter">{counterLikes}</span>
       </div>
     </article>
+    </>
   );
 }
 export default Card;

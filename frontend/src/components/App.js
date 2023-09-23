@@ -61,7 +61,6 @@ function App() {
       Promise.all([api.getUserInfo(localStorage.getItem("jwt")), api.getInitialCards(localStorage.getItem("jwt"))])
         .then(([info, infoCard]) => {
           setCurrentUser(info);
-          console.log(infoCard)
           infoCard.forEach((cards) => {
             cards.myId = info._id;
           });
@@ -73,10 +72,10 @@ function App() {
     }
   }, [loggedIn]);
   function handleCardLike(card) {
-    const isLiked = card.likes.some((i) => i._id === currentUser._id);
+    const isLiked = card.likes.some((i) => i === currentUser._id);
     if (isLiked) {
       api
-        .deleteLike(card._id)
+        .deleteLike(card._id, localStorage.getItem("jwt"))
         .then((newCard) => {
           setCards((state) =>
             state.map((c) => (c._id === card._id ? newCard : c))
@@ -85,7 +84,7 @@ function App() {
         .catch((error) => console.error(`Ошибка удаления лайка ${error}`));
     } else {
       api
-        .putLike(card._id, !isLiked)
+        .putLike(card._id, localStorage.getItem("jwt"))
         .then((newCard) => {
           setCards((state) =>
             state.map((c) => (c._id === card._id ? newCard : c))
@@ -96,7 +95,7 @@ function App() {
   }
   function handleCardDelete(cardId) {
     api
-      .deleteCard(cardId)
+      .deleteCard(cardId, localStorage.getItem("jwt"))
       .then(() => {
         setCards((state) => state.filter((item) => item._id !== cardId));
         closeAllPopups();
@@ -105,7 +104,7 @@ function App() {
   }
   function handleUpdateUser(props) {
     api
-      .setUserInfo(props)
+      .setUserInfo(props, localStorage.getItem("jwt"))
       .then((res) => {
         setCurrentUser(res);
         closeAllPopups();
@@ -116,7 +115,7 @@ function App() {
   }
   function handleUpdateAvatar(props) {
     api
-      .setUserAvatar(props)
+      .setUserAvatar(props, localStorage.getItem("jwt"))
       .then((res) => {
         setCurrentUser(res);
         closeAllPopups();
@@ -127,7 +126,7 @@ function App() {
   }
   function handleAddPlaceSubmit(props) {
     api
-      .addCard(props)
+      .addCard(props, localStorage.getItem("jwt"))
       .then((newCard) => {
         setCards([newCard, ...cards]);
         closeAllPopups();
