@@ -1,7 +1,6 @@
 import "../index.css";
 import Header from "./Header.js";
 import Main from "./Main.js";
-
 import ImagePopup from "./ImagePopup.js";
 import Login from "./Login";
 import Register from "./Register";
@@ -58,7 +57,10 @@ function App() {
   }
   React.useEffect(() => {
     if (loggedIn) {
-      Promise.all([api.getUserInfo(localStorage.getItem("jwt")), api.getInitialCards(localStorage.getItem("jwt"))])
+      Promise.all([
+        api.getUserInfo(localStorage.getItem("jwt")),
+        api.getInitialCards(localStorage.getItem("jwt")),
+      ])
         .then(([info, infoCard]) => {
           setCurrentUser(info);
           infoCard.forEach((cards) => {
@@ -134,7 +136,7 @@ function App() {
       .catch((error) => console.error(`Ошибка добавления карточки ${error}`));
   }
 
-  function handleLogin(email, password)  {
+  function handleLogin(email, password) {
     auth
       .authorize(email, password)
       .then((data) => {
@@ -148,7 +150,7 @@ function App() {
         setIsInfoTooltipPopupOpen(true);
         console.log(err);
       });
-  };
+  }
 
   function handleRegister(email, password) {
     auth
