@@ -1,7 +1,7 @@
 import "../index.css";
 import Header from "./Header.js";
 import Main from "./Main.js";
-import PopupWithForm from "./PopupWithForm.js";
+
 import ImagePopup from "./ImagePopup.js";
 import Login from "./Login";
 import Register from "./Register";
@@ -243,11 +243,7 @@ function App() {
         onClose={closeAllPopups}
         onUpdateUser={handleUpdateAvatar}
       />
-      <PopupWithForm
-        title="Вы уверены?"
-        name="question"
-        buttonText="Да"
-      ></PopupWithForm>
+
       <ImagePopup card={selectedCard} onClose={closeAllPopups} />
       <InfoTooltip
         onClose={closeAllPopups}

@@ -15,7 +15,7 @@ const auth = require('./middlewares/auth');
 const NotFoundError = require('./errors/NotFoundError');
 const patternUrl = require('./utils/constants');
 
-const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/mestodbtest2' } = process.env;
+const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 
 const app = express();
 

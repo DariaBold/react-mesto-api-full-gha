@@ -1,4 +1,5 @@
-export const BASE_URL = "http://localhost:3000";
+// export const BASE_URL = "http://localhost:3000";
+export const BASE_URL = "https://frontend.mesto.nomoredomainsrocks.ru";
 
 function getResponseData(res) {
   if (!res.ok) {

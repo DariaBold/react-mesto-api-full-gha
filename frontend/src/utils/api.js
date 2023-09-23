@@ -86,6 +86,8 @@ class Api {
   }
 }
 const api = new Api({
-  baseUrl: "http://localhost:3000",
+  baseUrl: "https://frontend.mesto.nomoredomainsrocks.ru",
+  
+  //baseUrl: "http://localhost:3000",
 });
 export default api;
