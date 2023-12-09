@@ -1,16 +1,28 @@
 [![Статус тестов](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
 
-# react-mesto-api-full
-Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположите в директории `backend/`, а фронтенд - в `frontend/`. 
-  
-Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
+# Проект Mesto фронтенд + бэкенд  
 
-Адрес репозитория: https://github.com/DariaBold/react-mesto-api-full-gha
+## О проекте  
 
-## Ссылки на проект
+Репозиторий для приложения проекта `Mesto`, включающий <a href="https://github.com/DariaBold/react-mesto-auth">фронтенд</a> и <a href="https://github.com/DariaBold/express-mesto-gha">бэкенд</a> части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями.
 
-IP 84.201.159.70
+## Что использовано  
+Back-end
+- JavaScript
+- React  
+- Express
+- MongoDB
+- Postman  
+Front-end:  
+- HTML
+- CSS
+- JavaScript
 
-Frontend https://mesto.full.nomoredomainsrocks.ru
+## Развёртывание проекта:
 
-Backend https://frontend.mesto.nomoredomainsrocks.ru
+`npm i` — установка зависимостей;
+`npm run start` — запуск серверa;
+`npm run dev` — запуск сервера с hot-reload;
+
+Cсылка на репозиторий: https://github.com/DariaBold/express-mesto-gha.git
+
