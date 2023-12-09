@@ -20,8 +20,8 @@ Front-end:
 - JavaScript
 
 ## Ссылки на проект
-<a href="https://github.com/DariaBold/react-mesto-auth">фронтенд</a>  
-<a href="https://github.com/DariaBold/express-mesto-gha">бэкенд</a>
+<a href="https://github.com/DariaBold/react-mesto-auth">Фронтенд</a> часть  
+<a href="https://github.com/DariaBold/express-mesto-gha">Бэкенд</a> часть  
 ## Развёртывание проекта:
 
 `npm i` — установка зависимостей;  
