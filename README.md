@@ -1,5 +1,3 @@
-[![Статус тестов](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
-
 # Проект Mesto фронтенд + бэкенд  
 
 ## О проекте  
