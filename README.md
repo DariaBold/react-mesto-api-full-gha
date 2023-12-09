@@ -23,7 +23,10 @@ Front-end:
 <a href="https://github.com/DariaBold/react-mesto-auth">Фронтенд</a> часть  
 <a href="https://github.com/DariaBold/express-mesto-gha">Бэкенд</a> часть  
 ## Развёртывание проекта:
-
+Back: 
 `npm i` — установка зависимостей;  
-`npm run start` — запуск серверa;  
 `npm run dev` — запуск сервера с hot-reload;  
+Front:  
+`npm i` — установка зависимостей;  
+`npm run build` — сборка проекта;  
+`npm run start` — запуск серверa;  
