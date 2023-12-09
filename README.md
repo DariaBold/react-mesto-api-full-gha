@@ -21,9 +21,6 @@ Front-end:
 
 ## Развёртывание проекта:
 
-`npm i` — установка зависимостей;
-`npm run start` — запуск серверa;
-`npm run dev` — запуск сервера с hot-reload;
-
-Cсылка на репозиторий: https://github.com/DariaBold/express-mesto-gha.git
-
+`npm i` — установка зависимостей;  
+`npm run start` — запуск серверa;  
+`npm run dev` — запуск сервера с hot-reload;  
