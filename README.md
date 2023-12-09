@@ -6,13 +6,14 @@
 
 Репозиторий для приложения проекта `Mesto`, включающий <a href="https://github.com/DariaBold/react-mesto-auth">фронтенд</a> и <a href="https://github.com/DariaBold/express-mesto-gha">бэкенд</a> части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями.
 
-## Что использовано  
+## Что использовано
 Back-end
 - JavaScript
 - React  
 - Express
 - MongoDB
-- Postman  
+- Postman
+
 Front-end:  
 - HTML
 - CSS
